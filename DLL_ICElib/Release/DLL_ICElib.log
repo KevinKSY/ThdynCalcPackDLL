@@ -1,0 +1,87 @@
+﻿Build started 2014-10-09 오후 3:57:37.
+     1>Project "E:\DBox\Dropbox\Study\ModelLibrary\Code\ThermodynamicCalculation\DLL_ICElib\DLL_ICElib.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\DLL_ICElib.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       MessageBuildingWithCompiler:
+         Building with Intel(R) C++ Compiler XE 12.1
+       ClCompile:
+         ***** ClCompile (Win32 - Intel C++)
+         C:\Program Files (x86)\Intel\Composer XE 2011 SP1\bin\ia32\icl.exe /c /Qvc10 /Qlocation,link,"$(VCInstallDir)\bin" /Zi /nologo /W3 /O2 /Oi /Qipo /Qftz- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DLL_ICELIB_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP DLLsrc.cpp
+         DLLsrc.cpp
+         C:\Program Files (x86)\Intel\Composer XE 2011 SP1\bin\ia32\icl.exe /c /Qvc10 /Qlocation,link,"$(VCInstallDir)\bin" /Zi /nologo /W3 /O2 /Oi /Qipo /Qftz- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DLL_ICELIB_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC Get3Wiebe.c Get3WiebePara.c GetAirDensity.c GetAirThermalConduct.c GetAirViscosity.c GetCompCombGas.c GetCompCombGas_initialize.c GetCompCombGas_rtwutil.c GetCompCombGas_terminate.c GetCompleteComb.c GetDensityHCVapor.c GetDiffusivityHCVaporToAir.c GetEquilGrill.c GetFuelPropertyN_Dodecane.c GetHTCoeffHTX.c GetIdealNozzleFlow.c GetPTF.c GetPTx.c GetROHRDyn.c GetThdynCombGasZach.c GetThermalPropertyHCVaporReal.c GetThermoDynProp.c GetTxV.c GetT_atm_p.c GetViscosityHCVapor.c rdivide.c rtGetInf.c rtGetNaN.c rt_nonfinite.c sum.c
+         Get3Wiebe.c
+         Get3WiebePara.c
+         GetAirDensity.c
+         GetAirThermalConduct.c
+         GetAirViscosity.c
+         GetCompCombGas.c
+         GetCompCombGas_initialize.c
+         GetCompCombGas_rtwutil.c
+         GetCompCombGas_terminate.c
+         GetCompleteComb.c
+         GetDensityHCVapor.c
+         GetDiffusivityHCVaporToAir.c
+         GetEquilGrill.c
+         GetFuelPropertyN_Dodecane.c
+         GetHTCoeffHTX.c
+         GetIdealNozzleFlow.c
+         GetPTF.c
+         GetPTx.c
+         GetROHRDyn.c
+         GetThdynCombGasZach.c
+         GetThermalPropertyHCVaporReal.c
+         GetThermoDynProp.c
+         GetTxV.c
+         GetT_atm_p.c
+         GetViscosityHCVapor.c
+         rdivide.c
+         rtGetInf.c
+         rtGetNaN.c
+         rt_nonfinite.c
+         sum.c
+       Link:
+         C:\Program Files (x86)\Intel\Composer XE 2011 SP1\bin\ia32\xilink.exe /OUT:"E:\DBox\Dropbox\Study\ModelLibrary\Code\ThermodynamicCalculation\Release\DLL_ICElib.dll" /INCREMENTAL:NO /NOLOGO FortranTermoLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:MSVCRT.lib /MANIFEST /ManifestFile:"Release\DLL_ICElib.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\DBox\Dropbox\Study\ModelLibrary\Code\ThermodynamicCalculation\Release\DLL_ICElib.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\DBox\Dropbox\Study\ModelLibrary\Code\ThermodynamicCalculation\Release\DLL_ICElib.lib" /MACHINE:X86 /DLL Release\DLLsrc.obj
+         Release\Get3Wiebe.obj
+         Release\Get3WiebePara.obj
+         Release\GetAirDensity.obj
+         Release\GetAirThermalConduct.obj
+         Release\GetAirViscosity.obj
+         Release\GetCompCombGas.obj
+         Release\GetCompCombGas_initialize.obj
+         Release\GetCompCombGas_rtwutil.obj
+         Release\GetCompCombGas_terminate.obj
+         Release\GetCompleteComb.obj
+         Release\GetDensityHCVapor.obj
+         Release\GetDiffusivityHCVaporToAir.obj
+         Release\GetEquilGrill.obj
+         Release\GetFuelPropertyN_Dodecane.obj
+         Release\GetHTCoeffHTX.obj
+         Release\GetIdealNozzleFlow.obj
+         Release\GetPTF.obj
+         Release\GetPTx.obj
+         Release\GetROHRDyn.obj
+         Release\GetThdynCombGasZach.obj
+         Release\GetThermalPropertyHCVaporReal.obj
+         Release\GetThermoDynProp.obj
+         Release\GetTxV.obj
+         Release\GetT_atm_p.obj
+         Release\GetViscosityHCVapor.obj
+         Release\rdivide.obj
+         Release\rtGetInf.obj
+         Release\rtGetNaN.obj
+         Release\rt_nonfinite.obj
+         Release\sum.obj
+     1>ipo : warning #11024: Main entry point was not seen
+         xilink: executing 'link'
+            Creating library E:\DBox\Dropbox\Study\ModelLibrary\Code\ThermodynamicCalculation\Release\DLL_ICElib.lib and object E:\DBox\Dropbox\Study\ModelLibrary\Code\ThermodynamicCalculation\Release\DLL_ICElib.exp
+         DLL_ICElib.vcxproj -> E:\DBox\Dropbox\Study\ModelLibrary\Code\ThermodynamicCalculation\Release\DLL_ICElib.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\DBox\Dropbox\Study\ModelLibrary\Code\ThermodynamicCalculation\Release\DLL_ICElib.dll;#2" /manifest Release\DLL_ICElib.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\DLL_ICElib.unsuccessfulbuild".
+         Touching "Release\DLL_ICElib.lastbuildstate".
+     1>Done Building Project "E:\DBox\Dropbox\Study\ModelLibrary\Code\ThermodynamicCalculation\DLL_ICElib\DLL_ICElib.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.18
