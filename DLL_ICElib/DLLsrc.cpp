@@ -64,6 +64,12 @@ double GetAirThermalConduct(double rho, double T);
 double GetHTCoeffHTX(double p, double m_dot, double T, double D, double A);
 void GetFuelPropertyN_Dodecane(double p, double T, double *p_v, double *rho_l, 
 	double *h_l, double *Cp_l, double *h_fg, double *mu_l, double *lambda_l, double *sigma_l);
+void GetThdynCombGasZachV1(double P, double T, double F, double fs, double *R, double *h,
+  double *s, double *u, double *RF, double *RP, double *RT, double *uF, double
+  *uP, double *uT, double *sF, double *sP, double *sT, double *Cp, double *Cv, double *K);
+void GetPTFV1(double m, double m_b, double E, double V, double T_prev, 
+        double R_prev, double u_prev, double Cv_prev, double fs,
+        double *p, double *T, double *F);
 
 DllExport int thdyn_AirDensity(double *inarr, int inputs, double *outarr, int outputs, int major)
 {
@@ -125,6 +131,30 @@ DllExport int thdyn_CombGasZach(double *inarr, int inputs, double *outarr, int o
 	
 	return 0;
 }
+
+DllExport int thdyn_CombGasZachV1(double *inarr, int inputs, double *outarr, int outputs, int major)
+{
+	double p, T, F, fs;
+	double R, h, s, u, RF, Rp, RT, uF, up, uT, sF, sp, sT, Cp, Cv, K;
+
+	p = inarr[0];		T = inarr[1];
+	F = inarr[2];		fs = inarr[3];
+
+	GetThdynCombGasZachV1(p, T, F, fs, &R, &h, &s, &u, &RF, &Rp, &RT, &uF, &up, &uT, &sF, &sp, &sT, &Cp, &Cv, &K);
+
+	outarr[0] = R;		outarr[1] = u;
+	outarr[2] = s;		outarr[3] = h;
+	outarr[4] = RF;		outarr[5] = Rp;
+	outarr[6] = RT;		outarr[7] = uF;
+	outarr[8] = up;		outarr[9] = uT;
+	outarr[10] = sF;	outarr[11] = sp;
+	outarr[12] = sT;
+	outarr[13] = Cp;	outarr[14] = Cv;
+	outarr[15] = K;		
+	
+	return 0;
+}
+
 DllExport int thdyn_T_atm_p(double *inarr, int inputs, double *outarr, int outputs, int major)
 {
 	double h, F, T_prev;
@@ -154,6 +184,25 @@ DllExport int thdyn_PTF(double *inarr, int inputs, double *outarr, int outputs, 
 	
 	return 0;
 }
+DllExport int thdyn_PTFV1(double *inarr, int inputs, double *outarr, int outputs, int major)
+{
+	double m, m_b, E, V, T_prev, R_prev, u_prev, Cv_prev, fs;		
+	double P, T, F;
+	
+	m		= inarr[0];		E		= inarr[1];
+	m_b		= inarr[2];		V		= inarr[3];
+	T_prev	= inarr[4];		R_prev	= inarr[5];	
+	u_prev	= inarr[6];		Cv_prev = inarr[7];		
+	fs		= inarr[8];		
+
+	GetPTFV1(m, m_b, E, V, T_prev, R_prev, u_prev, Cv_prev, fs, &P, &T, &F);
+
+	outarr[0] = P;		outarr[1] = T;
+	outarr[2] = F;	
+	
+	return 0;
+}
+
 DllExport int thdyn_Flow_Ideal_Nozzle(double *inarr, int inputs, double *outarr, int outputs, int major)
 {
 	double Cd, A, p_in, p_out, T_in, F_in, fs;		
