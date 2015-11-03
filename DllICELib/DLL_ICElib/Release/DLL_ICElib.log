@@ -1,0 +1,55 @@
+﻿Build started 10/28/2015 1:05:30 AM.
+     1>Project "C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\DLL_ICElib\DLL_ICElib.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\DLL_ICElib.unsuccessfulbuild".
+       MessageBuildingWithCompiler:
+         Building with Intel(R) C++ Compiler XE 12.1
+       ClCompile:
+         ***** ClCompile (Win32 - Intel C++)
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Intel\Composer XE 2011 SP1\bin\ia32\xilink.exe /OUT:"C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\Release\DLL_ICElib.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\FortranTermoLib\Release FortranTermoLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:MSVCRT.lib /MANIFEST /ManifestFile:"Release\DLL_ICElib.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\Release\DLL_ICElib.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\Release\DLL_ICElib.lib" /MACHINE:X86 /DLL Release\DLLsrc.obj
+         Release\GetAirDensity.obj
+         Release\GetAirThermalConduct.obj
+         Release\GetAirViscosity.obj
+         Release\GetCompCombGas.obj
+         Release\GetCompleteComb.obj
+         Release\GetDensityHCVapor.obj
+         Release\GetDiffusivityHCVaporToAir.obj
+         Release\GetEquilGrill.obj
+         Release\GetFuelPropertyN_Dodecane.obj
+         Release\GetHTCoeffHTX.obj
+         Release\GetIdealNozzleFlowPTF.obj
+         Release\GetPTFV1.obj
+         Release\GetPTx.obj
+         Release\GetTFromPhF.obj
+         Release\GetThdynCombGasZach.obj
+         Release\GetThdynCombGasZachV1.obj
+         Release\GetThermalPropertyHCVaporReal.obj
+         Release\GetThermoDynProp.obj
+         Release\GetT_atm_p.obj
+         Release\GetViscosityHCVapor.obj
+         Release\power.obj
+         Release\rdivide.obj
+         Release\rtGetInf.obj
+         Release\rtGetNaN.obj
+         Release\rt_nonfinite.obj
+         Release\sqrt.obj
+         Release\ThdynPack_data.obj
+         Release\ThdynPack_rtwutil.obj
+     1>ipo : warning #11072: ignoring invalid linker directive 'FAILIFMISMATCH:"_MSC_VER=1600"'
+     1>ipo : warning #11072: ignoring invalid linker directive 'FAILIFMISMATCH:"_ITERATOR_DEBUG_LEVEL=0"'
+     1>ipo : warning #11024: Main entry point was not seen
+         xilink: executing 'link'
+            Creating library C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\Release\DLL_ICElib.lib and object C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\Release\DLL_ICElib.exp
+         DLL_ICElib.vcxproj -> C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\Release\DLL_ICElib.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\Release\DLL_ICElib.dll;#2" /manifest Release\DLL_ICElib.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\DLL_ICElib.unsuccessfulbuild".
+         Touching "Release\DLL_ICElib.lastbuildstate".
+     1>Done Building Project "C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\DLL_ICElib\DLL_ICElib.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.55

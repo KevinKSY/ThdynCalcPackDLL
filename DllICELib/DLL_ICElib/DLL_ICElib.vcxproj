@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E27566BB-61AA-4893-ACD2-D773983951F2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DLL_ICElib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Intel C++ Compiler XE 12.1</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Intel C++ Compiler XE 12.1</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DLL_ICELIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>FortranTermoLib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\FortranTermoLib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;DLL_ICELIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>FortranTermoLib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <LinkStatus>
+      </LinkStatus>
+      <IgnoreSpecificDefaultLibraries>MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\DllICELib\FortranTermoLib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DLLsrc.cpp" />
+    <ClCompile Include="GetAirDensity.cpp" />
+    <ClCompile Include="GetAirThermalConduct.cpp" />
+    <ClCompile Include="GetAirViscosity.cpp" />
+    <ClCompile Include="GetCompCombGas.cpp" />
+    <ClCompile Include="GetCompleteComb.cpp" />
+    <ClCompile Include="GetDensityHCVapor.cpp" />
+    <ClCompile Include="GetDiffusivityHCVaporToAir.cpp" />
+    <ClCompile Include="GetEquilGrill.cpp" />
+    <ClCompile Include="GetFuelPropertyN_Dodecane.cpp" />
+    <ClCompile Include="GetHTCoeffHTX.cpp" />
+    <ClCompile Include="GetIdealNozzleFlowPTF.cpp" />
+    <ClCompile Include="GetPTFV1.cpp" />
+    <ClCompile Include="GetPTx.cpp" />
+    <ClCompile Include="GetTFromPhF.cpp" />
+    <ClCompile Include="GetThdynCombGasZach.cpp" />
+    <ClCompile Include="GetThdynCombGasZachV1.cpp" />
+    <ClCompile Include="GetThermalPropertyHCVaporReal.cpp" />
+    <ClCompile Include="GetThermoDynProp.cpp" />
+    <ClCompile Include="GetT_atm_p.cpp" />
+    <ClCompile Include="GetViscosityHCVapor.cpp" />
+    <ClCompile Include="power.cpp" />
+    <ClCompile Include="rdivide.cpp" />
+    <ClCompile Include="rtGetInf.cpp" />
+    <ClCompile Include="rtGetNaN.cpp" />
+    <ClCompile Include="rt_nonfinite.cpp" />
+    <ClCompile Include="sqrt.cpp" />
+    <ClCompile Include="ThdynPack_data.cpp" />
+    <ClCompile Include="ThdynPack_rtwutil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GetAirDensity.h" />
+    <ClInclude Include="GetAirThermalConduct.h" />
+    <ClInclude Include="GetAirViscosity.h" />
+    <ClInclude Include="GetCompCombGas.h" />
+    <ClInclude Include="GetCompleteComb.h" />
+    <ClInclude Include="GetDensityHCVapor.h" />
+    <ClInclude Include="GetDiffusivityHCVaporToAir.h" />
+    <ClInclude Include="GetEquilGrill.h" />
+    <ClInclude Include="GetFuelPropertyN_Dodecane.h" />
+    <ClInclude Include="GetHTCoeffHTX.h" />
+    <ClInclude Include="GetIdealNozzleFlowPTF.h" />
+    <ClInclude Include="GetPTFV1.h" />
+    <ClInclude Include="GetPTx.h" />
+    <ClInclude Include="GetTFromPhF.h" />
+    <ClInclude Include="GetThdynCombGasZach.h" />
+    <ClInclude Include="GetThdynCombGasZachV1.h" />
+    <ClInclude Include="GetThermalPropertyHCVaporReal.h" />
+    <ClInclude Include="GetThermoDynProp.h" />
+    <ClInclude Include="GetT_atm_p.h" />
+    <ClInclude Include="GetViscosityHCVapor.h" />
+    <ClInclude Include="power.h" />
+    <ClInclude Include="rdivide.h" />
+    <ClInclude Include="rtGetInf.h" />
+    <ClInclude Include="rtGetNaN.h" />
+    <ClInclude Include="rtwtypes.h" />
+    <ClInclude Include="rt_nonfinite.h" />
+    <ClInclude Include="sqrt.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="ThdynPack_data.h" />
+    <ClInclude Include="ThdynPack_rtwutil.h" />
+    <ClInclude Include="ThdynPack_types.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
