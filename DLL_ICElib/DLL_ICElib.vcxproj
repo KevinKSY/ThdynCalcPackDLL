@@ -81,6 +81,7 @@
       <LinkStatus>
       </LinkStatus>
       <IgnoreSpecificDefaultLibraries>MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>C:\Users\yum\Dropbox\Study\ModelLibrary\Code\ThermodynamicCalculation\ThdynCalcPackDLL\FortranTermoLib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -102,9 +103,11 @@
     <ClCompile Include="GetHTCoeffHTX.c" />
     <ClCompile Include="GetIdealNozzleFlow.c" />
     <ClCompile Include="GetPTF.c" />
+    <ClCompile Include="GetPTFV1.c" />
     <ClCompile Include="GetPTx.c" />
     <ClCompile Include="GetROHRDyn.c" />
     <ClCompile Include="GetThdynCombGasZach.c" />
+    <ClCompile Include="GetThdynCombGasZachV1.c" />
     <ClCompile Include="GetThermalPropertyHCVaporReal.c" />
     <ClCompile Include="GetThermoDynProp.c" />
     <ClCompile Include="GetTxV.c" />
@@ -135,9 +138,11 @@
     <ClInclude Include="GetHTCoeffHTX.h" />
     <ClInclude Include="GetIdealNozzleFlow.h" />
     <ClInclude Include="GetPTF.h" />
+    <ClInclude Include="GetPTFV1.h" />
     <ClInclude Include="GetPTx.h" />
     <ClInclude Include="GetROHRDyn.h" />
     <ClInclude Include="GetThdynCombGasZach.h" />
+    <ClInclude Include="GetThdynCombGasZachV1.h" />
     <ClInclude Include="GetThermalPropertyHCVaporReal.h" />
     <ClInclude Include="GetThermoDynProp.h" />
     <ClInclude Include="GetTxV.h" />

@@ -108,6 +108,12 @@
     <ClCompile Include="GetDiffusivityHCVaporToAir.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GetPTFV1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetThdynCombGasZachV1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Get3Wiebe.h">
@@ -204,6 +210,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GetDiffusivityHCVaporToAir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetPTFV1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetThdynCombGasZachV1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
