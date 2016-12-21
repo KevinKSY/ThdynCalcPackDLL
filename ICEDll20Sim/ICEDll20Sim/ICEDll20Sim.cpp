@@ -25,6 +25,7 @@
 #include "subroutines\GetPTF.h"
 #include "subroutines\GetPTFV1.h"
 #include "subroutines\GetPTx.h"
+#include "subroutines\GetPTFSimple.h"
 #include "subroutines\GetTFromPhF.h"
 #include "subroutines\GetT_atm_p.h"
 #include "subroutines\GetThdynCombGasZach.h"
@@ -161,6 +162,22 @@ extern "C"
 		uPrev = inarr[6];	CvPrev = inarr[7];	fs = inarr[8];
 
 		GetPTFV1(m, mb, E, V, TPrev, RPrev, uPrev, CvPrev, fs, &p, &T, &F);
+
+		outarr[0] = p;		outarr[1] = T;		outarr[2] = F;
+
+		return 0; // Success
+	}
+
+	DLLEXPORT int getpTFSimple(double *inarr, int inputs, double *outarr, int outputs, int major)
+	{
+		real_T m, E, mb, V, PPrev, TPrev, fs;
+		real_T p, T, F;
+
+		m = inarr[0];		E = inarr[1];		mb = inarr[2];
+		V = inarr[3];		PPrev = inarr[4];	TPrev = inarr[5];
+		fs = inarr[6];	
+
+		GetPTFSimple(m, mb, E, V, PPrev, TPrev, fs, &p, &T, &F);
 
 		outarr[0] = p;		outarr[1] = T;		outarr[2] = F;
 

@@ -28,28 +28,28 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Intel C++ Compiler XE 12.1</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Intel C++ Compiler XE 12.1</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Intel C++ Compiler XE 12.1</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Intel C++ Compiler XE 12.1</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -76,7 +76,7 @@
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -93,7 +93,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Intel\Composer XE 2011 SP1\compiler\lib\ia32;C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\ICELibFor\ICELibFor\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ICELibFor.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -110,7 +110,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Program Files (x86)\Intel\Composer XE 2011 SP1\compiler\lib\ia32;C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\ICELibFor\ICELibFor\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ICELibFor.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -129,8 +129,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Intel\Composer XE 2011 SP1\compiler\lib\ia32;C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\ICELibFor\ICELibFor\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ICELibFor.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -150,7 +150,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>C:\Program Files (x86)\Intel\Composer XE 2011 SP1\compiler\lib\ia32;C:\Users\yum\Documents\GitHub\ThdynCalcPackDLL\ICELibFor\ICELibFor\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ICELibFor.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -173,6 +173,7 @@
     <ClCompile Include="subroutines\GetIdealNozzleFlowPTF.cpp" />
     <ClCompile Include="subroutines\GetMEMbZach.cpp" />
     <ClCompile Include="subroutines\GetPTF.cpp" />
+    <ClCompile Include="subroutines\GetPTFSimple.cpp" />
     <ClCompile Include="subroutines\GetPTFV1.cpp" />
     <ClCompile Include="subroutines\GetPTx.cpp" />
     <ClCompile Include="subroutines\GetTFromPhF.cpp" />
@@ -193,9 +194,7 @@
     <ClCompile Include="subroutines\rt_nonfinite.cpp" />
     <ClCompile Include="subroutines\sqrt.cpp" />
     <ClCompile Include="subroutines\ThdynPack_data.cpp" />
-    <ClCompile Include="subroutines\ThdynPack_initialize.cpp" />
     <ClCompile Include="subroutines\ThdynPack_rtwutil.cpp" />
-    <ClCompile Include="subroutines\ThdynPack_terminate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="subroutines\compressor_calc_PTF.h" />
@@ -216,6 +215,7 @@
     <ClInclude Include="subroutines\GetIdealNozzleFlowPTF.h" />
     <ClInclude Include="subroutines\GetMEMbZach.h" />
     <ClInclude Include="subroutines\GetPTF.h" />
+    <ClInclude Include="subroutines\GetPTFSimple.h" />
     <ClInclude Include="subroutines\GetPTFV1.h" />
     <ClInclude Include="subroutines\GetPTx.h" />
     <ClInclude Include="subroutines\GetTFromPhF.h" />

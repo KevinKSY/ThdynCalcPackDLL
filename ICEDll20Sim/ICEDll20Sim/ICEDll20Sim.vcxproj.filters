@@ -126,19 +126,16 @@
     <ClCompile Include="subroutines\ThdynPack_data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="subroutines\ThdynPack_initialize.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="subroutines\ThdynPack_rtwutil.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="subroutines\ThdynPack_terminate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="subroutines\dNOx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="subroutines\compressor_calc_PTF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subroutines\GetPTFSimple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -270,6 +267,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="subroutines\compressor_calc_PTF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="subroutines\GetPTFSimple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
