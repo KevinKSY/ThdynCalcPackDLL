@@ -62,10 +62,10 @@ void compressor_calc_PTF(const real_T *pu,
 	static int nGridFlow, nGridEff;
 	if (!init) {
 		ifstream myfile;
-		myfile.open("C:\\Users\\yum\\Documents\\GitHub\\HyMarCoSim\\ModelLibrary\\InternalCombustionEngine\\compFlowMap.dat");
+		myfile.open("compFlowMap.dat");
 		myfile >> nGridFlow;
 		myfile.close();
-		myfile.open("C:\\Users\\yum\\Documents\\GitHub\\HyMarCoSim\\ModelLibrary\\InternalCombustionEngine\\compEffMap.dat");
+		myfile.open("compEffMap.dat");
 		myfile >> nGridEff;
 		myfile.close();
 	}
