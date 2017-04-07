@@ -1,5 +1,5 @@
 /* Example C++ DLL for 20-sim */
-#include <windows.h>
+//#include <windows.h>
 #include <math.h>
 #include <iostream>
 #include <fstream>
@@ -98,7 +98,7 @@ extern "C"
 				xAir[i] = inarr[11 + i];
 			}
 		}
-		
+
 		switch (mode)
 		{
 		case 1:		//using Zacharias methods
@@ -141,7 +141,7 @@ extern "C"
 
 		m = inarr[0];		E = inarr[1];		mb = inarr[2];
 		V = inarr[3];		TPrev = inarr[4];	fs = inarr[5];
-		
+
 
 		GetPTF(m, E, mb, V, TPrev, fs, &p, &T, &F);
 
@@ -175,7 +175,7 @@ extern "C"
 
 		m = inarr[0];		E = inarr[1];		mb = inarr[2];
 		V = inarr[3];		PPrev = inarr[4];	TPrev = inarr[5];
-		fs = inarr[6];	
+		fs = inarr[6];
 
 		GetPTFSimple(m, mb, E, V, PPrev, TPrev, fs, &p, &T, &F);
 
@@ -188,7 +188,7 @@ extern "C"
 	{
 		real_T p, h, F, fs;
 
-		p = inarr[0];		h = inarr[1];		F = inarr[2];		fs = inarr[3];		
+		p = inarr[0];		h = inarr[1];		F = inarr[2];		fs = inarr[3];
 		outarr[0] = GetTFromPhF(p, h, F, fs);
 
 		return 0; // Success
@@ -209,7 +209,7 @@ extern "C"
 		return 0; // Success
 	}
 
-	
+
 	DLLEXPORT int compressorPTF(double *inarr, int inputs, double *outarr, int outputs, int major)
 	{
 
@@ -219,19 +219,19 @@ extern "C"
 		pu = inarr[0];		Tu = inarr[1];		Fu = inarr[2];
 		pd = inarr[3];		Td = inarr[4];		Fd = inarr[5];
 		omegat = inarr[6];	flow_prev = inarr[7];	eta_prev = inarr[8];
-		fs = inarr[9];		
+		fs = inarr[9];
 
-		
-		compressor_calc_PTF(&pu, &Tu, &Fu, &pd, &Td, &Fd, &omegat, &dmu, &deu, 
+
+		compressor_calc_PTF(&pu, &Tu, &Fu, &pd, &Td, &Fd, &omegat, &dmu, &deu,
 			&dmbu, &dmd, &ded, &dmbd, &Tqt, &eta_ic, &flow_prev, &eta_prev, &fs, 1);
 
 		outarr[0] = dmu;		outarr[1] = deu;		outarr[2] = dmbu;
 		outarr[3] = dmd;		outarr[4] = ded;		outarr[5] = dmbd;
-		outarr[6] = Tqt;		outarr[7] = eta_ic;		
+		outarr[6] = Tqt;		outarr[7] = eta_ic;
 
 		return 0; // Success
 	}
-	
+
 /*
 	DLLEXPORT int ice_comres(double *inarr, int inputs, double *outarr, int outputs, int major)
 
@@ -251,7 +251,7 @@ extern "C"
 		outarr[0] = dmc;		outarr[1] = deu;		outarr[2] = dmfc;
 		outarr[3] = dmco;		outarr[4] = ded;		outarr[5] = dmfco;
 		outarr[6] = momc;		outarr[7] = etaic;
-		
+
 		return 0;
 	}
 */
@@ -260,7 +260,7 @@ extern "C"
 		double p_in, dm, T_mean, D, A;
 		double alpha;
 
-		p_in = inarr[0];		dm = inarr[1];		T_mean = inarr[2];		
+		p_in = inarr[0];		dm = inarr[1];		T_mean = inarr[2];
 		D = inarr[3];			A = inarr[4];
 
 		alpha = GetHTCoeffHTX(p_in,dm,T_mean,D,A);
@@ -269,7 +269,7 @@ extern "C"
 
 		return 0; // Success
 	}
-	
+
 
 	/****** Initialization and cleanup ******/
 	/* Note 1:
@@ -365,4 +365,3 @@ extern "C"
 		return 0;
 	}
 }
-

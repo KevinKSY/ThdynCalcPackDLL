@@ -10,6 +10,7 @@
  */
 
 /* Include files */
+#include <omp.h>
 #include "rt_nonfinite.h"
 #include "GetAirDensity.h"
 #include "GetAirThermalConduct.h"
@@ -44,7 +45,7 @@
 /* Function Definitions */
 void ThdynPack_terminate()
 {
-  omp_destroy_nest_lock(&emlrtNestLockGlobal);
+  //omp_destroy_nest_lock(&emlrtNestLockGlobal);
 }
 
 /* End of code generation (ThdynPack_terminate.cpp) */

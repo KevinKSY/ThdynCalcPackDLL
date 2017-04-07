@@ -19,7 +19,7 @@
 #include <string.h>
 #include "rt_nonfinite.h"
 #include "rtwtypes.h"
-#include "omp.h"
+#include <omp.h>
 #include "ThdynPack_types.h"
 
 /* Function Declarations */

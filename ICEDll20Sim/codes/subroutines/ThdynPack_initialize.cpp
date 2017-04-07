@@ -45,7 +45,7 @@
 void ThdynPack_initialize()
 {
   rt_InitInfAndNaN(8U);
-  omp_init_nest_lock(&emlrtNestLockGlobal);
+  //omp_init_nest_lock(&emlrtNestLockGlobal);
 }
 
 /* End of code generation (ThdynPack_initialize.cpp) */

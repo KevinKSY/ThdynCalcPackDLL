@@ -64,10 +64,11 @@ void compressor_calc_PTF(const real_T *pu,
 
 	string errMsg;
 	string path;
+/*
 	const int BUFFER_SIZE = 2048;
 	LPWSTR buffer = new WCHAR[BUFFER_SIZE];
 	GetModuleFileName(NULL, buffer, BUFFER_SIZE);
-	
+*/
 	if (!init) {
 		ifstream myfile;
 
@@ -82,8 +83,8 @@ void compressor_calc_PTF(const real_T *pu,
 		myfile >> nGridEff;
 		myfile.close();
 	}
-	static vector<vector<double>> effMap(nGridEff, vector<double>(nGridEff));
-	static vector<vector<double>> flowMap(nGridFlow, vector<double>(nGridFlow));
+	static vector<vector <double> > effMap(nGridEff, vector<double>(nGridEff));
+	static vector<vector <double> > flowMap(nGridFlow, vector<double>(nGridFlow));
 	static vector<double> prRep(nGridFlow);
 	static vector<double> speedRep(nGridEff);
 
@@ -161,7 +162,7 @@ void compressor_calc_PTF(const real_T *pu,
 	}
 	else
 	{
-		// interpolate in the 2D speed table to find the corresponding 
+		// interpolate in the 2D speed table to find the corresponding
 		// corrected flow (dm_corr) and isentropic efficiency (eta_ic)
 		i = 1;
 		while ((prRep[i] < pic) && (i < nGridEff))
@@ -197,7 +198,7 @@ void compressor_calc_PTF(const real_T *pu,
 		GetThdynCombGasZachV1(*pu, *Tu, *Fu, fs[0], &Ru, &hu, &su, &uu, &RFu, &Rpu, &RTu,
 			&uFu, &upu, &uTu, &sFu, &spu, &sTu, &Cpu, &Cvu, &Ku);
 
-		//Calculate the temperature and thermodynamic property of the downstream 
+		//Calculate the temperature and thermodynamic property of the downstream
 		//gas with isentropic expansion
 		Tdi = *Tu*pow(pic, ((Ku - 1) / (Ku)));
 		GetThdynCombGasZachV1(*pd, Tdi, *Fu, fs[0], &Rdi, &hdi, &sdi, &udi, &RFdi, &Rpdi,
