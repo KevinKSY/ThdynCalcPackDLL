@@ -1,0 +1,56 @@
+﻿  ICEDll20Sim.cpp
+  compressor_calc_PTF.cpp
+..\..\codes\subroutines\compressor_calc_PTF.cpp(74): warning C4129: 'c': unrecognized character escape sequence
+..\..\codes\subroutines\compressor_calc_PTF.cpp(81): warning C4129: 'c': unrecognized character escape sequence
+..\..\codes\subroutines\compressor_calc_PTF.cpp(76): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(178): note: see declaration of 'strerror'
+..\..\codes\subroutines\compressor_calc_PTF.cpp(63): warning C4101: 'fopen': unreferenced local variable
+  dNOx.cpp
+  GetAirDensity.cpp
+  GetAirThermalConduct.cpp
+  GetAirViscosity.cpp
+  GetCompCombGas.cpp
+  GetCompleteComb.cpp
+  GetCorrAirComp.cpp
+  GetDensityHCVapor.cpp
+  GetDiffusivityHCVaporToAir.cpp
+  GetEquilGrill.cpp
+  GetEquilOlikara.cpp
+  GetFuelPropertyN_Dodecane.cpp
+  GetHTCoeffHTX.cpp
+  GetIdealNozzleFlow.cpp
+  GetIdealNozzleFlowPTF.cpp
+  GetMEMbZach.cpp
+  GetPTF.cpp
+  GetPTFSimple.cpp
+  Compiling...
+  GetPTFV1.cpp
+  GetPTx.cpp
+  GetTFromPhF.cpp
+  GetThdynCombGasZach.cpp
+  GetThdynCombGasZachV1.cpp
+  GetThermalPropertyHCVaporReal.cpp
+  GetThermoDynProp.cpp
+  GetThermoDynPropPartial.cpp
+  GetTotalStaticPT.cpp
+  GetT_atm_p.cpp
+  GetViscosityHCVapor.cpp
+  KpNASA7_upper.cpp
+  mldivide.cpp
+  power.cpp
+  rdivide.cpp
+  rtGetInf.cpp
+  rtGetNaN.cpp
+  rt_nonfinite.cpp
+  sqrt.cpp
+  ThdynPack_data.cpp
+  Compiling...
+  ThdynPack_initialize.cpp
+  ThdynPack_rtwutil.cpp
+  ThdynPack_terminate.cpp
+     Creating library C:\Users\keviny\Documents\github\ThdynCalcPackDLL\ICEDll20Sim\projects\VS2015\Release\ICEDll20Sim.lib and object C:\Users\keviny\Documents\github\ThdynCalcPackDLL\ICEDll20Sim\projects\VS2015\Release\ICEDll20Sim.exp
+  Generating code
+  All 311 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ICEDll20Sim.vcxproj -> C:\Users\keviny\Documents\github\ThdynCalcPackDLL\ICEDll20Sim\projects\VS2015\Release\ICEDll20Sim.dll
+  ICEDll20Sim.vcxproj -> C:\Users\keviny\Documents\github\ThdynCalcPackDLL\ICEDll20Sim\projects\VS2015\Release\ICEDll20Sim.pdb (Full PDB)
